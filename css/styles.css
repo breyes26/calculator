@@ -6,6 +6,7 @@
 
 html{
     height: 100%;
+  
 }
 body{
     min-height: 100vh;
@@ -16,15 +17,30 @@ body{
 
 
 #display{
+    font-family: 'Righteous', cursive;
     display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: flex-end;
     background-color:rgb(223, 219, 219);
     grid-column: 1/-1;
     margin: 5px;
-    padding: 5px;
+    padding: 10px;
     margin-bottom: 10px;
     border-radius: 2%;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
 }
+
+
+#history{
+    font-size: 25px;
+    color: rgb(1, 94, 1);
+}
+
+#current{
+    font-size: 50px;
+}
+
 
 div.calculator{
     display: flex;
@@ -39,7 +55,7 @@ div.container-grid{
     display: grid;
     grid-template-columns: repeat(4,100px);
     grid-template-rows: minmax(120px,auto) repeat(5,80px);
-    grid-gap: 4px;
+    grid-gap: 5px;
     background-color: black;
     border: rgb(40, 40, 40) solid 10px;
     border-radius: 1%;
@@ -54,7 +70,8 @@ button{
     background-color:gray;
     border-radius: 5%;
     margin: .05rem;
-    border: none
+    border: none;
+    transition: all .07s ease;
 }
 
 button.digit:hover,button.decimal:hover{

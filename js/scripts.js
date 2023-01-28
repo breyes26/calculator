@@ -1,4 +1,33 @@
 const ROUND = 3;
+const ALL_BUTTONS = document.querySelectorAll("button");
+const HISTORY = document.querySelector("#history");
+const CURRENT = document.querySelector('#current');
+const DIGITS = document.querySelectorAll('button.digit');
+
+let numOne = "";
+let numTwo = "";
+let operand = "";
+
+DIGITS.forEach((digit)=>{
+    digit.addEventListener('click',()=>{
+        alert("Hello");
+    })
+});
+
+
+
+
+ALL_BUTTONS.forEach((button)=>{
+    button.addEventListener('mouseover',(e)=>{
+        button.style.transform= "scale(1.05)";
+    }
+    )
+
+    button.addEventListener('mouseout',(e)=>{
+        button.style.removeProperty("transform");
+    }
+    )
+});
 
 function isNum(num){
     return !isNaN(num);
@@ -56,4 +85,3 @@ function operate(a,op,b){
     }
 }
 
-operate("1","*","3");
